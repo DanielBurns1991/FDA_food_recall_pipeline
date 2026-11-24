@@ -1,5 +1,5 @@
 {
-  "trained_utc": "2026-11-24T22:26:31+00:00",
+  "trained_utc": "2026-11-24T22:39:12+00:00",
   "selected_model": "Logistic regression",
   "selection_metric": "class_I_recall",
   "split": "StratifiedGroupKFold on event_id, one of five folds held out",

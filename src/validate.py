@@ -119,9 +119,6 @@ def save_outputs(clean, held, results, stop_failures, config) -> Path:
     clean.to_parquet(out / "recalls_clean.parquet", index=False)
     return clean_path
 
-print(df.loc[df["state"].isna(), "country"].value_counts().head(10))
-
-
 if __name__ == "__main__":
     config = load_config()
     df = pd.read_parquet(ROOT / config["paths"]["processed"] / "recalls_transformed.parquet")

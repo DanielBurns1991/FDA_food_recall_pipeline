@@ -226,3 +226,4 @@ data/raw/
 .env
 .venv/
 data/processed/*.parquet
+logs/
