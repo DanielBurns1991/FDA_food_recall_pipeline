@@ -1,0 +1,3 @@
+event_id,reason_for_recall,predicted,prob_I
+99986,Potential contamination due to E. coli O26:H11.,I,0.809
+100248,Possible Salmonella contamination.,I,0.873

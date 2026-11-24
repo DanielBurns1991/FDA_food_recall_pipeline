@@ -1,0 +1,78 @@
+{
+  "trained_utc": "2026-11-24T22:26:31+00:00",
+  "selected_model": "Logistic regression",
+  "selection_metric": "class_I_recall",
+  "split": "StratifiedGroupKFold on event_id, one of five folds held out",
+  "random_seed": 42,
+  "train_rows": 23686,
+  "test_rows": 5921,
+  "features": [
+    "reason_clean",
+    "hazard",
+    "voluntary_mandated",
+    "initial_firm_notification",
+    "state",
+    "nationwide",
+    "international",
+    "n_states_named"
+  ],
+  "excluded_features": {
+    "center_classification_date": "exists only after FDA classifies the recall",
+    "report_date": "the enforcement report is published after classification",
+    "recall_number": "FDA assigns it to a product once it is classified",
+    "status": "describes the outcome months later",
+    "termination_date": "describes the outcome months later",
+    "is_terminated": "derived from termination_date",
+    "recalling_firm": "lets the model memorise firms, and is unfair to them"
+  },
+  "scores": [
+    {
+      "model": "Majority class",
+      "accuracy": 0.5,
+      "macro_f1": 0.222,
+      "class_I_recall": 0.0
+    },
+    {
+      "model": "Keyword rule",
+      "accuracy": 0.757,
+      "macro_f1": 0.52,
+      "class_I_recall": 0.721
+    },
+    {
+      "model": "Logistic regression",
+      "accuracy": 0.736,
+      "macro_f1": 0.614,
+      "class_I_recall": 0.844
+    },
+    {
+      "model": "Random forest",
+      "accuracy": 0.761,
+      "macro_f1": 0.621,
+      "class_I_recall": 0.799
+    }
+  ],
+  "confusion_matrix": {
+    "labels": [
+      "I",
+      "II",
+      "III"
+    ],
+    "matrix": [
+      [
+        2195,
+        366,
+        41
+      ],
+      [
+        537,
+        2028,
+        395
+      ],
+      [
+        16,
+        207,
+        136
+      ]
+    ]
+  }
+}
