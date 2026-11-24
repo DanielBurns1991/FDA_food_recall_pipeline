@@ -47,3 +47,6 @@ hazards:              # checked in order; the first match wins
 distribution:
   nationwide: [nationwide, nation wide, nation-wide, all 50 states, throughout the united states, throughout the us]
   international: [canada, mexico, international, worldwide, export, japan, china, korea, taiwan, hong kong, australia, united kingdom, europe, germany, france, israel, caribbean, bahamas]
+
+validation:
+  max_quarantine_share: 0.02   # stop the run if more than 2% of rows are quarantined

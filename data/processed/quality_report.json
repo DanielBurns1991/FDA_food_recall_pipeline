@@ -1,0 +1,83 @@
+{
+  "validated_utc": "2026-11-24T21:57:38+00:00",
+  "source_run": "2026-11-24T204221Z",
+  "rows_in": 29609,
+  "rows_clean": 29607,
+  "rows_quarantined": 2,
+  "passed": true,
+  "stop_failures": [],
+  "rules": [
+    {
+      "rule": "recall_number_unique",
+      "action": "stop",
+      "description": "Each recall number appears only once",
+      "checked": 29609,
+      "failed": 0,
+      "passed": 29609
+    },
+    {
+      "rule": "recall_number_present",
+      "action": "quarantine",
+      "description": "Every record has a recall number",
+      "checked": 29609,
+      "failed": 2,
+      "passed": 29607
+    },
+    {
+      "rule": "reason_present",
+      "action": "quarantine",
+      "description": "Every record has a reason for recall",
+      "checked": 29609,
+      "failed": 0,
+      "passed": 29609
+    },
+    {
+      "rule": "report_date_present",
+      "action": "quarantine",
+      "description": "Every record has a report date",
+      "checked": 29609,
+      "failed": 0,
+      "passed": 29609
+    },
+    {
+      "rule": "no_future_dates",
+      "action": "quarantine",
+      "description": "No date is later than today",
+      "checked": 29609,
+      "failed": 0,
+      "passed": 29609
+    },
+    {
+      "rule": "classification_known",
+      "action": "warn",
+      "description": "Classification is I, II or III (unclassified rows are kept but not used for training)",
+      "checked": 29609,
+      "failed": 2,
+      "passed": 29607
+    },
+    {
+      "rule": "terminated_has_date",
+      "action": "warn",
+      "description": "Terminated recalls have a termination date",
+      "checked": 29609,
+      "failed": 4,
+      "passed": 29605
+    },
+    {
+      "rule": "initiated_before_classified",
+      "action": "warn",
+      "description": "A recall starts on or before FDA classifies it",
+      "checked": 29609,
+      "failed": 0,
+      "passed": 29609
+    },
+    {
+      "rule": "us_firm_has_state",
+      "action": "warn",
+      "description": "Firms in the United States have a state",
+      "checked": 29609,
+      "failed": 0,
+      "passed": 29609
+    }
+  ]
+}
