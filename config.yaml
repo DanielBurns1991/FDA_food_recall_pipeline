@@ -13,3 +13,37 @@ paths:
 model:
   random_seed: 42
   test_size: 0.2
+
+hazards:              # checked in order; the first match wins
+  - name: listeria
+    keywords: [listeria]
+  - name: salmonella
+    keywords: [salmonella]
+  - name: e_coli
+    keywords: [e. coli, e.coli, escherichia, stec, o157]
+  - name: botulism_or_processing
+    keywords: [botulinum, botulism, low acid, low-acid, acidified, under-processed, underprocessed]
+  - name: other_microbial
+    keywords: [cyclospora, hepatitis, norovirus, cronobacter, staphylococcus, bacillus cereus, vibrio, mold, mould, yeast, pathogen, apc, aerobic plate count, bacteria, bacterial, spoil, bloat, swell, swollen, ferment]
+  - name: allergen
+    keywords: [allergen, milk, egg, peanut, tree nut, almond, cashew, walnut, pecan, hazelnut, pistachio, soy, wheat, gluten, sesame, shellfish, shrimp, crab, lobster, fish, sulfite, sulphite, sulfur dioxide]
+  - name: additive
+    keywords: [fd&c, yellow 5, "yellow #5", yellow no. 5, yellow 6, "yellow #6", red 40, "red #40", blue 1, "blue #1", tartrazine, ponceau, e124, cyclamate, color additive, colour additive, unapproved color, unapproved colour]
+  - name: foreign_material
+    keywords: [foreign, metal, plastic, glass, wood, rubber, stone, fragment, extraneous]
+  - name: chemical
+    keywords: [pesticide, arsenic, cadmium, mercury, chemical, sanitiz, histamine, toxin]
+  - name: temperature_control
+    keywords: [temperature, refrigerat, thaw, cold chain]
+  - name: manufacturing_practice
+    keywords: [cgmp, gmp, good manufacturing, consent decree, insanitary, unsanitary]
+  - name: composition
+    keywords: [subpotent, superpotent, potency, vitamin, excess, elevated level]
+  - name: labelling
+    keywords: [label, misbrand, net weight, nutrition facts, principal display panel, species, substitut]
+  - name: packaging
+    keywords: [burst, explod, container defect, packaging defect, leak]
+
+distribution:
+  nationwide: [nationwide, nation wide, nation-wide, all 50 states, throughout the united states, throughout the us]
+  international: [canada, mexico, international, worldwide, export, japan, china, korea, taiwan, hong kong, australia, united kingdom, europe, germany, france, israel, caribbean, bahamas]
