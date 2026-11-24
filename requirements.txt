@@ -8,3 +8,6 @@ joblib
 plotly
 streamlit
 pytest
+ipykernel
+nbformat
+kaleido
