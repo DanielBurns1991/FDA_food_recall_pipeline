@@ -6,6 +6,17 @@ api:
   max_retries: 5
   pause_seconds: 0.25
 
+load:
+  push: true
+  files:
+    - data/processed/recalls_clean.csv
+    - data/processed/predictions.csv
+    - data/processed/pending_predictions.csv
+    - data/processed/metrics.json
+    - data/processed/quality_report.json
+    - data/processed/quarantine.csv
+    - models/recall_classifier.joblib
+
 paths:
   raw: data/raw
   processed: data/processed
