@@ -1,0 +1,10 @@
+requests
+pandas
+pyarrow
+pyyaml
+python-dotenv
+scikit-learn
+joblib
+plotly
+streamlit
+pytest
