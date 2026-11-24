@@ -2,6 +2,9 @@ api:
   base_url: https://api.fda.gov/food/enforcement.json
   page_size: 1000
   sort_field: report_date
+  timeout_seconds: 30
+  max_retries: 5
+  pause_seconds: 0.25
 
 paths:
   raw: data/raw
